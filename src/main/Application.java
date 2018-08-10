@@ -12,15 +12,7 @@ public class Application {
         university.addStudent(new Student("Maria Perechrest", 13));
 
         Internship internship = new Internship("Interlink");
-
-        /*
-            We don't need to calculate uniAverage each time we use getUniAverage()
-            and that's why we use the updateUniAverage() method.
-         */
-        university.updateUniAverage();
-        for(Student st : university.getStudentsList()) {
-            internship.setStudent(st);
-        }
+        internship.addUniversity(university);
 
         System.out.println("List of internship's students:");
         System.out.println(internship.getStudents());
