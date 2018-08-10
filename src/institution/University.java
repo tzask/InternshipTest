@@ -21,17 +21,20 @@ public class University {
 
     public void addStudent(Student student) {
         if (student != null) {
-            studentsList.add(student);
             student.setStudentUniversity(this);
+            studentsList.add(student);
         }
     }
 
     public void updateUniAverage() {
         if (!studentsList.isEmpty()) {
+            uniAverage = 0;
             for (Student st : studentsList) {
                 uniAverage += st.getKnowledge();
             }
             uniAverage /= studentsList.size();
+        } else {
+            uniAverage = 0;
         }
     }
 
