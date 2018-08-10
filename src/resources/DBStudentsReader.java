@@ -8,5 +8,6 @@ public class DBStudentsReader implements StudentsDataReader{
          /*
             Add your implementation here.
          */
+        return new ArrayList<Student>();
     }
 }
